@@ -1,0 +1,17 @@
+*** Settings ***
+Library    BuiltIn
+
+
+*** Test Cases ***
+Test 1
+    ImportLibrary    Remote    http://127.0.0.1:8072
+    Keyword 1
+
+Test 2
+    ${retVal}=    Keyword 2    arg1
+    Log           ${retVal}
+
+Test 3
+    @{retVal}=    Keyword 3    arg1    arg2
+    Log           ${retVal}
+    Log           @{retVal}[0]
